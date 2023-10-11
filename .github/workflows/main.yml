@@ -2,7 +2,16 @@ name: Docker CI
 
 on: 
   push:
-    branches: [ main ]
+    branches: 
+      - main
+      - master
+  
+  workflow_run:
+    workflows: ['build']
+    types:
+      - completed
+
+  worflow_disparch:
 
 jobs:
   build:
@@ -23,4 +32,4 @@ jobs:
       with:
         context:
         push: true
-        tags: justineln44/docker-test:latest
+        tags: justineln44/docker-todo-app:latest
