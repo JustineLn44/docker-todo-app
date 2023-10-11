@@ -11,7 +11,7 @@ on:
     types:
       - completed
 
-  worflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
